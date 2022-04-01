@@ -2,14 +2,14 @@ package com.tistory.katfun.core.order;
 
 public class Order {
 
-    private Long memgberId;
-    private String itenName;
+    private Long memberId;
+    private String itemName;
     private int itemPrice;
     private int discountPrice;
 
-    public Order(Long memgberId, String itenName, int itemPrice, int discountPrice) {
-        this.memgberId = memgberId;
-        this.itenName = itenName;
+    public Order(Long memgberId, String itemName, int itemPrice, int discountPrice) {
+        this.memberId = memgberId;
+        this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.discountPrice = discountPrice;
     }
@@ -19,19 +19,19 @@ public class Order {
     }
 
     public Long getMemgberId() {
-        return memgberId;
+        return memberId;
     }
 
-    public void setMemgberId(Long memgberId) {
-        this.memgberId = memgberId;
+    public void setMemgberId(Long memberId) {
+        this.memberId = memberId;
     }
 
-    public String getItenName() {
-        return itenName;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setItenName(String itenName) {
-        this.itenName = itenName;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
     public int getItemPrice() {
@@ -53,8 +53,8 @@ public class Order {
     @Override
     public String toString() {
         return "Order{" +
-                "memgberId=" + memgberId +
-                ", itenName='" + itenName + '\'' +
+                "memberId=" + memberId +
+                ", itemName='" + itemName + '\'' +
                 ", itemPrice=" + itemPrice +
                 ", discountPrice=" + discountPrice +
                 '}';
