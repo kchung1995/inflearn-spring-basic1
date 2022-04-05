@@ -1,17 +1,26 @@
 package com.tistory.katfun.core.order;
 
+import com.tistory.katfun.core.AppConfig;
 import com.tistory.katfun.core.member.Grade;
 import com.tistory.katfun.core.member.Member;
 import com.tistory.katfun.core.member.MemberService;
 import com.tistory.katfun.core.member.MemberServiceImpl;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;
 
 public class OrderServiceTest {
 
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService;
+    OrderService orderService;
+
+    @BeforeEach
+    public void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
+    }
 
     @Test
     void createOrder() {

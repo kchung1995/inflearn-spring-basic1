@@ -1,11 +1,19 @@
 package com.tistory.katfun.core.member;
 
+import com.tistory.katfun.core.AppConfig;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
 
-    MemberService memberService = new MemberServiceImpl();
+    MemberService memberService;
+
+    @BeforeEach
+    public void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
 
     @Test
     void join() {
