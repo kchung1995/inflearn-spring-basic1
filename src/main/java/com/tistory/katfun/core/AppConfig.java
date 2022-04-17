@@ -1,7 +1,6 @@
 package com.tistory.katfun.core;
 
 import com.tistory.katfun.core.discount.DiscountPolicy;
-import com.tistory.katfun.core.discount.FixedDiscountPolicy;
 import com.tistory.katfun.core.discount.RateDiscountPolicy;
 import com.tistory.katfun.core.member.MemberRepository;
 import com.tistory.katfun.core.member.MemberService;

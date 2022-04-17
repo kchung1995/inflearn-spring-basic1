@@ -1,6 +1,5 @@
 package com.tistory.katfun.core.beanfind;
 
-import com.tistory.katfun.core.AppConfig;
 import com.tistory.katfun.core.discount.DiscountPolicy;
 import com.tistory.katfun.core.discount.FixedDiscountPolicy;
 import com.tistory.katfun.core.discount.RateDiscountPolicy;

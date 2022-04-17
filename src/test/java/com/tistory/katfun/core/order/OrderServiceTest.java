@@ -4,11 +4,9 @@ import com.tistory.katfun.core.AppConfig;
 import com.tistory.katfun.core.member.Grade;
 import com.tistory.katfun.core.member.Member;
 import com.tistory.katfun.core.member.MemberService;
-import com.tistory.katfun.core.member.MemberServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.util.Assert;
 
 public class OrderServiceTest {
 

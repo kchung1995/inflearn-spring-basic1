@@ -2,11 +2,10 @@ package com.tistory.katfun.core.discount;
 
 import com.tistory.katfun.core.member.Grade;
 import com.tistory.katfun.core.member.Member;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RateDiscountPolicyTest {
 
