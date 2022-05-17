@@ -3,7 +3,9 @@ package com.tistory.katfun.core.order;
 import com.tistory.katfun.core.discount.DiscountPolicy;
 import com.tistory.katfun.core.member.Member;
 import com.tistory.katfun.core.member.MemberRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
