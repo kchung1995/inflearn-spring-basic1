@@ -30,4 +30,19 @@ public class ConfigurationSingletonTest {
         assertThat(memberService.getMemberRepository()).isSameAs(memberRepository);
         assertThat(orderService.getMemberRepository()).isSameAs(memberRepository);
     }
+
+    @Test
+    void configurationDeep() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println("bean = " + bean.getClass());
+        // 순수한 클라스라면 아래와 같이 출력되어야 한다.
+        // bean = class com.tistory.katfun.core.AppConfig
+        // bean = class com.tistory.katfun.core.AppConfig$$EnhancerBySpringCGLIB$$af945e9f
+        // CGLIB: 바이트코드 조작 라이브러리 - 임의의 다른 클라스를 만들어 스프링 빈으로 등록
+        // CGLIB가 싱글톤이 되도록 보장해 준다.
+        // appConfig@CGLIB는 appConfig의 자식 타입이므로 appConfig으로 조회해도 뜬 것이다
+        // @Configuration을 사용하지 않고 @Bean만 사용하면, 예상했던 대로 여러 번 호출된다.
+    }
 }
