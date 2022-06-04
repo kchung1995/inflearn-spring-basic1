@@ -2,7 +2,9 @@ package com.tistory.katfun.core.discount;
 
 import com.tistory.katfun.core.member.Grade;
 import com.tistory.katfun.core.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;
