@@ -1,20 +1,14 @@
 package com.tistory.katfun.core.discount;
 
+import com.tistory.katfun.core.annotation.MainDiscountPolicy;
 import com.tistory.katfun.core.member.Grade;
 import com.tistory.katfun.core.member.Member;
-<<<<<<< HEAD
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
-//@Qualifier("mainDiscountPolicy")
-=======
-import org.springframework.stereotype.Component;
-
-@Component
->>>>>>> ec076fdfbb79226b3a821fe070b74da90e033abc
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;
